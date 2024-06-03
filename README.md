@@ -69,6 +69,7 @@ do
 done
 ```
 
+This will populate the `cache` directory with the new faiss indices for LAION named `knn.paired_QT_4bit.index*`. 
 
 
 
