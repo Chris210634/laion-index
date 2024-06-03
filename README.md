@@ -20,9 +20,17 @@ This faiss build was tested on linux with the following versions of packages:
 
 ## Step 2: Calculate or Download Features
 
-Now we need to download or calculate the features 
+For clustering (index training), we used a 20M subset of LAION-2B. The indexing model is CLIP ViT/L-14.
 
-TODO
+You can download these features here: [20M_image_features_half.tensor](https://drive.google.com/file/d/1GC4K0_MegJg8wNE9rcnh5O149iMu4Rhp/view?usp=drive_link), [20M_caption_features_half.tensor](https://drive.google.com/file/d/1dGgzeqseleYR42Vd2UjLSPVTkZ_TSpii/view?usp=drive_link)
+
+Alternatively, you can use the python scripts in `tools/` folder to generate the features from scratch. For example:
+
+```bash
+python tools/generate_text_features.py  --img_list_filename caption_list_filename
+python tools/generate_image_features.py --img_list_filename image_list_filename
+```
+where `caption_list_filename` is a file created using `torch.save(...)` with a list of captions as strings. `image_list_filename` is a list of image file paths (probably safest to use absolute paths).
 
 ## Step 3: Train the index
 
