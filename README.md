@@ -1,6 +1,8 @@
 # Implementation of Paried k-means Indexing
 ----------
 
+ArXiv paper: [link](https://arxiv.org/pdf/2402.04416)
+
 ## Step 1: Install Faiss
 
 We use a slightly modified version of FAISS to implement paired k-means indexing. The fork [here](https://github.com/Chris210634/faiss) contains the modifications. It is forked from version 1.7.3 of Faiss.
