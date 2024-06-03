@@ -105,7 +105,7 @@ img_emb_2129.npy
 img_emb_2261.npy
 ```
 
-Please download these from [this Google drive](https://drive.google.com/drive/folders/1kvh5VG4ruGOcSiHKJX9dWJhPAGVgPSZs?usp=drive_link)
+Please download these from [this Google drive](https://drive.google.com/drive/folders/1LPn_UvkHPqEhUUdTYifnJflKPVar1uNm?usp=drive_link)
 
 These features were reconstucted from the knn indices released by LAION using the code `tools/reconstruct_laion_features.py`. 
 
