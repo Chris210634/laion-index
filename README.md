@@ -79,5 +79,32 @@ done
 
 This will populate the `cache` directory with the new faiss indices for LAION named `knn.paired_QT_4bit.index*`. 
 
+### Note:
 
+The following numpy files are missing from the LAION server:
+```
+img_emb_0667.npy
+img_emb_0904.npy
+img_emb_1055.npy
+img_emb_1357.npy
+img_emb_1438.npy
+img_emb_1552.npy
+img_emb_1559.npy
+img_emb_1615.npy
+img_emb_1640.npy
+img_emb_1668.npy
+img_emb_1689.npy
+img_emb_1798.npy
+img_emb_1865.npy
+img_emb_2044.npy
+img_emb_2129.npy
+img_emb_2261.npy
+```
 
+Please download these from [this Google drive](https://drive.google.com/drive/folders/1kvh5VG4ruGOcSiHKJX9dWJhPAGVgPSZs?usp=drive_link)
+
+comment out following code in `faiss/IndexIVF.cpp` to reconstruct LAION features:
+```cpp
+void IndexIVF::reconstruct_n(idx_t i0, idx_t ni, float* recons) const {
+    // FAISS_THROW_IF_NOT(ni == 0 || (i0 >= 0 && i0 + ni <= ntotal));
+```
